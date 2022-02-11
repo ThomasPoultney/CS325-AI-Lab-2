@@ -124,19 +124,19 @@ def explore(goal, start, debug):
 
 		# Figure out which moves can be made and add them to the tree
 		emptyIndex = node.board.index(0)
-		if emptyIndex == 1 or emptyIndex == 2 or emptyIndex == 4 or emptyIndex == 5 or emptyIndex == 7 or emptyIndex == 8: # END MY LIFE
+		if emptyIndex == 1 or emptyIndex == 2 or emptyIndex == 4 or emptyIndex == 5 or emptyIndex == 7 or emptyIndex == 8: 
 			exploreQueue.insert(performMove(node, Move.LEFT))
 			if debug:
 				print("Able to move:\t\tLEFT")
-		if emptyIndex == 0 or emptyIndex == 1 or emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 6 or emptyIndex == 7: # END MY LIFE
+		if emptyIndex == 0 or emptyIndex == 1 or emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 6 or emptyIndex == 7: 
 			exploreQueue.insert(performMove(node, Move.RIGHT))
 			if debug:
 				print("Able to move:\t\tRIGHT")
-		if emptyIndex == 0 or emptyIndex == 1 or emptyIndex == 2 or emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 5: # END MY LIFE
+		if emptyIndex == 0 or emptyIndex == 1 or emptyIndex == 2 or emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 5: 
 			exploreQueue.insert(performMove(node, Move.DOWN))
 			if debug:
 				print("Able to move:\t\tDOWN")
-		if emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 5 or emptyIndex == 6 or emptyIndex == 7 or emptyIndex == 8: # END MY LIFE
+		if emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 5 or emptyIndex == 6 or emptyIndex == 7 or emptyIndex == 8: 
 			exploreQueue.insert(performMove(node, Move.UP))
 			if debug:
 				print("Able to move:\t\tUP")
@@ -171,25 +171,25 @@ def exploreAS(goal, start, debug):
 
 		# Figure out which moves can be made and add them to the tree
 		emptyIndex = node.board.index(0)
-		if emptyIndex == 1 or emptyIndex == 2 or emptyIndex == 4 or emptyIndex == 5 or emptyIndex == 7 or emptyIndex == 8: # END MY LIFE
+		if emptyIndex == 1 or emptyIndex == 2 or emptyIndex == 4 or emptyIndex == 5 or emptyIndex == 7 or emptyIndex == 8: 
 			tempNode = performMove(node, Move.LEFT,(node.value+1))
 			tempNode.value = (node.value+1)
 			exploreQueue.insert(tempNode)
 			if debug:
 				print("Able to move:\t\tLEFT")
-		if emptyIndex == 0 or emptyIndex == 1 or emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 6 or emptyIndex == 7: # END MY LIFE
+		if emptyIndex == 0 or emptyIndex == 1 or emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 6 or emptyIndex == 7: 
 			tempNode = performMove(node, Move.RIGHT,(node.value+1))
 			tempNode.value = (node.value+1)
 			exploreQueue.insert(tempNode)
 			if debug:
 				print("Able to move:\t\tRIGHT")
-		if emptyIndex == 0 or emptyIndex == 1 or emptyIndex == 2 or emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 5: # END MY LIFE
+		if emptyIndex == 0 or emptyIndex == 1 or emptyIndex == 2 or emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 5:
 			tempNode = performMove(node, Move.DOWN,(node.value+1))
 			tempNode.value = (node.value+1)
 			exploreQueue.insert(tempNode)
 			if debug:
 				print("Able to move:\t\tDOWN")
-		if emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 5 or emptyIndex == 6 or emptyIndex == 7 or emptyIndex == 8: # END MY LIFE
+		if emptyIndex == 3 or emptyIndex == 4 or emptyIndex == 5 or emptyIndex == 6 or emptyIndex == 7 or emptyIndex == 8: 
 			tempNode = performMove(node, Move.UP,(node.value+1))
 			exploreQueue.insert(tempNode)
 			if debug:
